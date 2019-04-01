@@ -1,11 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Loader from './Loader';
 
 export default class App extends React.Component {
+  state = {
+    loading: true
+  };
+
   render() {
+    const { loading } = this.state;
     return (
       <View style={styles.container}>
-        <Text>11Open up App.js to start working on your app!</Text>
+        {loading ? <Loader /> : <Text>11Open up App.js to start working on your app!</Text>}
       </View>
     );
   }
@@ -14,8 +20,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: '#fff'
   }
 });
