@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/native';
+import { LinearGradient } from 'expo';
 
-const Container = styled.View`
+const SLinearGradient = styled(LinearGradient)`
+  width: 100%;
   flex-grow: 1;
   display: flex;
   background-color: #ffeaa7;
@@ -15,7 +17,7 @@ const SText = styled.Text`
 `;
 
 export default () => (
-  <Container>
+  <SLinearGradient colors={[ '#fff7dd', '#ffeaa7' ]}>
     <SText>Loading Data...</SText>
-  </Container>
+  </SLinearGradient>
 );
